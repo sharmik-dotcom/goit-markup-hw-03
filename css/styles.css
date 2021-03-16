@@ -1,0 +1,229 @@
+/* набор используемых цветов + шрифтов */
+:root {
+  --main-color: #ffffff;
+
+  --first-text-color: #757575;
+  --second-text-color: #212121;
+
+  --accent-color: #2196f3;
+
+  --add-dark-text-color: #000000;
+  --add-light-text-color: rgba(255, 255, 255, 0.6);
+
+  --first-bg-color: #2f303a;
+  --second-bg-color: #f5f4fa;
+
+  --first-font-family: 'Roboto', sans-serif;
+  --second-font-family: 'Raleway', sans-serif;
+}
+
+/* устанавливает базовые(основные) шрифт + цвет + фон: для всего документа */
+body {
+  background-color: var(--main-color);
+
+  font-family: var(--first-font-family);
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--first-text-color);
+}
+
+/* скрывает заголовок */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+/* отключает маркеры: для списков ul всего документа*/
+.list {
+  list-style: none;
+}
+
+/* отключает подчеркивание: для ссылок всего документа */
+.link,
+.logo {
+  text-decoration: none;
+}
+
+/* устанавливает базовые(основные) шрифт + цвет: для ссылки лого */
+.logo {
+  font-family: var(--second-font-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  color: var(--add-dark-text-color);
+}
+
+/* устанавливает цвет: для ссылки лого */
+.logo.colored {
+  color: var(--main-color);
+}
+
+/* устанавливает акцентный цвет: для фрагмента ссылки лого */
+.colored-segment {
+  color: var(--accent-color);
+}
+
+/* устанавливает шрифт: для ссылок, находящихся в блоке навигации по сайту(кроме лого) и */
+/*                                              в блоке контактов шапки страницы */
+.main-nav .link,
+.main-contacts .link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* устанавливает цвет: для ссылок, находящихся в блоке навигации по сайту(кроме лого) */
+.main-nav .link {
+  color: var(--second-text-color);
+}
+
+/* устанавливает цвет: для ссылок, находящихся в блоке контактов шапки страницы */
+.main-contacts .link {
+  color: var(--first-text-color);
+}
+
+/* устанавливает акцентный цвет: при ховере, фокусе для ссылок, находящихся в блоке навигации по сайту(кроме лого), */
+/*                                                                          в блоке контактов шапки страницы и */
+/*                                                                          в блоке контактов подвала страницы */
+.main-nav .link:hover,
+.main-nav .link:focus,
+.main-contacts .link:hover,
+.main-contacts .link:focus,
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--accent-color);
+}
+
+/* устанавливает акцентный цвет: для текущей страницы */
+.main-nav .link.current {
+  color: var(--accent-color);
+}
+
+/* устанавливает фон: для Hero, подвала страницы */
+.hero,
+.page-footer {
+  background-color: var(--first-bg-color);
+}
+
+/* устанавливает шрифт + цвет: для заголовка Hero */
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--main-color);
+}
+
+/* устанавливает базовые(основные) шрифт + тип курсора: для кнопок всего документа */
+.button {
+  /* border: none; */
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+}
+
+/* устанавливает цвет + фон: для кнопки в Hero, при ховере, фокусе на кнопке-фильтр */
+.button.primary,
+.button.filter:hover,
+.button.filter:focus {
+  background-color: var(--accent-color);
+  color: var(--main-color);
+}
+
+/* устанавливает цвет + фон: для кнопки-фильтр, при ховере, фокусе на кнопке в Hero */
+.button.filter,
+.button.primary:hover,
+.button.primary:focus {
+  background-color: var(--second-bg-color);
+  color: var(--second-text-color);
+}
+
+/* устанавливает шрифт + цвет: для всех заголовков h2 главной страницы */
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--second-text-color);
+}
+
+/* устанавливает шрифт + цвет: для заголовков h3 секции Особенности главной страницы*/
+.feature .title {
+  font-weight: 700;
+  font-size:  inherit; /*14px;*/ 
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--second-text-color);
+}
+
+/* устанавливает шрифт: для заголовков h3, параграфов p секции Наша команда главной страницы*/
+.team .title,
+.team .text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+/* устанавливает шрифт + цвет: для заголовков h3 секции Наша команда главной страницы*/
+.team .title {
+  font-weight: 500;
+  color: var(--second-text-color);
+}
+
+/* устанавливает цвет: для параграфов p секции Наша команда главной страницы*/
+.team .text {
+  color: var(--first-text-color);
+}
+
+.team {
+  background-color: var(--second-bg-color);
+}
+
+/* устанавливает шрифт + цвет: для заголовков h2 секции Портфолио страницы Портфолио*/
+.portfolio .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+
+  color: var(--second-text-color);
+}
+
+/* устанавливает шрифт + цвет: для параграфов p секции Портфолио страницы Портфолио*/
+.portfolio .text {
+  font-size: 16px;
+  line-height: 1.87;
+
+  color: var(--first-text-color);
+}
+
+/* устанавливает шрифт + цвет: для адреса address в подвале страницы */
+.adds {
+  font-style: normal;
+  color: var(--main-color);
+}
+
+/* устанавливает цвет: для ссылок, находящихся в блоке контактов подвала страницы */
+.contacts .link {
+  color: var(--add-light-text-color);
+}
